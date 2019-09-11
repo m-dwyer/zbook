@@ -40,9 +40,9 @@ I also decided to keep GDM, as changing away from GDM to LightDM breaks power ma
 
 When in intel mode, optimus-manager appears to rely on a static modprobe blacklist file, and a systemd service then will load the nvidia modules manually.  However, something (?) on my system (I checked my initramfs) causes the `nvidia` module to load
 
-The workaround is to blacklist and add install options for modprobe.  I'm doing this manually for now, but working on something similar to [fedora-prime](https://github.com/m-dwyer/fedora-prime) for this, as I don't believe optimus-manager will work in its current form.
+The workaround is to blacklist and add install options for modprobe.  I'm doing this manually for now, but working on [optimus_primer](https://github.com/m-dwyer/optimus_primer) as I don't believe optimus-manager will work in its current form.
 
-In `/etc/modprobe.d/nvidia.conf` or similar:
+The manual workaround for now -- in `/etc/modprobe.d/nvidia.conf` or similar:
 ```
 blacklist nvidia_drm
 blacklist nvidia_uvm
