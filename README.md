@@ -66,7 +66,7 @@ After messing around a little looking through kernel driver source, attempting t
 
 #### Fix
 
-I decided to move back to Arch for a number of reasons, at which point one of the 5.2.x kernels had resolved this bug (I'm still curious to know where it was, as I'm not very familiar with kernel dev).
+I decided to move back to Arch for a number of reasons, at which point one of the 5.2.x kernels had resolved this bug --somwhere between 5.2.6 on Fedora, and 5.2.11 on Arch.  I'm still curious to know where it was, as I'm not very familiar with kernel dev..
 
 ### Touchpad not working on resume
 
