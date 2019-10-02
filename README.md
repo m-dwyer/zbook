@@ -68,6 +68,8 @@ After messing around a little looking through kernel driver source, attempting t
 
 I decided to move back to Arch for a number of reasons, at which point one of the 5.2.x kernels had resolved this bug -- somewhere between 5.2.6 on Fedora, and 5.2.11 on Arch.  I'm still curious to know where it was, as I'm not very familiar with kernel dev..
 
+EDIT 02/10/19 -- I suspect this relates to a buggy ACPI implementation.  The issue occurred again.  Powering the device off, and performing a hard reset (AC adapter, peripherals, etc unplugged followed by holding the power button for 15 seconds) seems to fix the issue.
+
 ### Touchpad not working on resume
 
 When suspending and resuming, the touchpad does not work.  Workaround:
@@ -75,3 +77,7 @@ When suspending and resuming, the touchpad does not work.  Workaround:
 `#rmmod i2c_hid && modprobe i2c_hid`
 
 Searching around, there are some systemd unit files to automate this.
+
+### USB-C to HDMI Adapter Not Working
+
+After updating to Q71 Firmware Pack (01.08.00 Rev A),  I noticed my USB-C to HDMI adapter was not working in Intel mode (i915 kernel module, with either Intel or modesetting XOrg driver). Unfortunately, I don't have a dmesg log showing the pcireport errors I was receiving, however downgrading the firmware back to 01.07.00 Rev A seemed to resolve the issue.
