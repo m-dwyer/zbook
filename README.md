@@ -2,7 +2,7 @@
 
 ## Current Setup
 
-* Arch Linux 5.2.13
+* Arch Linux 5.3.1
 * GNOME + GDM
 
 ## Known Issues
